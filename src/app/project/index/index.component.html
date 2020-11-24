@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Angular CRUD Example </h1>
+  
+    <a href="#" routerLink="/project/create/" class="btn btn-success">Create New Post</a>
+    
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Costo</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let project of projects">
+        <td>{{ project.id }}</td>
+        <td>{{ project.name }}</td>
+        <td>{{ project.cost }}</td>
+        <td>
+          <a href="#" [routerLink]="['/project/', project.id, 'view']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/project/', project.id, 'edit']" class="btn btn-primary">Edit</a>
+          <button type="button" (click)="deletePost(project.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </table>
+ </div>

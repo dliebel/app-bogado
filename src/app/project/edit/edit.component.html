@@ -1,0 +1,54 @@
+<div class="container">
+    <h1>Update Post</h1>
+  
+    <a href="#" routerLink="/project/index" class="btn btn-primary">Back</a>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input 
+                formControlName="name"
+                id="name" 
+                type="text" 
+                [(ngModel)]="project.name"
+                class="form-control">
+            <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
+                <div *ngIf="f.name.errors.required">Title is required.</div>
+            </div>
+        </div>
+         
+        <div class="form-group">
+            <label for="introduction">Intrucciones</label>
+            <textarea 
+                formControlName="introduction"
+                id="introduction" 
+                type="text" 
+                [(ngModel)]="project.introduction"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f.introduction.touched && f.introduction.invalid" class="alert alert-danger">
+                <div *ngIf="f.introduction.errors.required">Intruciones requerido.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="cost">Costo:</label>
+            <input 
+                formControlName="cost"
+                id="cost" 
+                type="number" 
+                [(ngModel)]="project.cost"
+                class="form-control">
+            <div *ngIf="f.cost.touched && f.cost.invalid" class="alert alert-danger">
+                <div *ngIf="f.cost.errors.required">Costo is required.</div>
+            </div>
+        </div>
+
+       
+
+        
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Update</button>
+    </form>
+</div>

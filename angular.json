@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "app-bogado"
+  "defaultProject": "app-bogado",
+  "cli": {
+    "analytics": "a819718f-4c79-47a1-b1e5-a950a2280082"
+  }
 }

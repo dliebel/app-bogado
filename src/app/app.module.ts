@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ProjectModule } from '../app/project/project.module';
+import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { ProjectModule } from '../app/project/project.module';
     AppRoutingModule,
     ProjectModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule
   ],
   exports: [
     CommonModule,

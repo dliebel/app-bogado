@@ -12,12 +12,12 @@
                         <div class="form-group">
                         <label>Nombre</label>
                         <input type="text" formControlName="name" class="form-control" placeholder="name" required>
-                        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                        <div *ngIf="name?.invalid && (name?.dirty || name?.touched)"
                                 class="form-text text-muted">
-                              <div *ngIf="name.errors?.required">
+                              <div *ngIf="name?.errors?.required">
                                 Nombre requerido
                               </div>
-                              <div *ngIf="name.errors?.minlength">
+                              <div *ngIf="name?.errors?.minlength">
                                 El nombre debe tener mas de 5 caracteres
                               </div>
                         </div> 
@@ -39,12 +39,12 @@
                         <label for="exampleInputEmail1">Correo</label>
                         <input type="email" formControlName="email" class="form-control" placeholder="ingrese un correo valido" required>
                         
-                        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
                                 class="form-text text-muted">
-                              <div *ngIf="email.errors?.required">
+                              <div *ngIf="email?.errors?.required">
                                 Correo requerido
                               </div>
-                              <div *ngIf="email.errors?.email">
+                              <div *ngIf="email?.errors?.email">
                                 Correo invalido
                               </div>
                         </div> 
@@ -60,12 +60,12 @@
                         <label>Password</label>
                         <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
                         
-                        <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)"
                                 class="form-text text-muted">
-                              <div *ngIf="password.errors?.required">
+                              <div *ngIf="password?.errors?.required">
                                 Password es requerido
                               </div>
-                              <div *ngIf="password.errors?.minlength">
+                              <div *ngIf="password?.errors?.minlength">
                                 Tiene que ser mas de 5 caracteres
                               </div>
                         </div>
@@ -80,12 +80,12 @@
                         <label>Confirm Password</label>
                         <input type="password" formControlName="password_confirmation" class="form-control" placeholder="Confirm Password" required>
                         
-                        <div *ngIf="password_confirmation.invalid && (password_confirmation.dirty || password_confirmation.touched)"
+                        <div *ngIf="password_confirmation?.invalid && (password_confirmation?.dirty || password_confirmation?.touched)"
                                 class="form-text text-muted">
-                              <div *ngIf="password_confirmation.errors?.required">
+                              <div *ngIf="password_confirmation?.errors?.required">
                                 Confirme su password
                               </div>
-                              <div *ngIf="password_confirmation.errors?.minlength">
+                              <div *ngIf="password_confirmation?.errors?.minlength">
                                 Tiene que tener la misma cantidad minima de caracteres de el original
                               </div>
                         </div>
